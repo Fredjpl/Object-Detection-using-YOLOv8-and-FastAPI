@@ -10,7 +10,7 @@ from ultralytics.yolo.utils.plotting import Annotator, colors
 
 
 # Initialize the models
-model_sample_detect = YOLO("./models/sample_model/yolov8n.pt")
+model_sample_detect = YOLO("./models/sample_model/best.pt")
 model_sample_segment = YOLO("./models/sample_model/yolov8n-seg.pt")
 
 
