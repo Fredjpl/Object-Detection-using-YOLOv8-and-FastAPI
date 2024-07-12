@@ -1,4 +1,4 @@
-ultralytics==8.0.105
+ultralytics
 uvicorn[standard]==0.20.0
 gunicorn==20.1.0
 fastapi[all]==0.89.1
