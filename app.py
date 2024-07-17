@@ -172,15 +172,15 @@ def detect_sample_model(input_image: Image) -> pd.DataFrame:
     Returns:
         pd.DataFrame: DataFrame containing the object location.
     """
-    predict = get_model_predict(
-        model=model_sample_detect,
-        input_image=input_image,
-        save=False,
-        image_size=640,
-        augment=False,
+    predict = model_sample_detect.predict(
+        imgsz=640, 
+        source=input_image, 
         conf=0.9,
+        save=False, 
+        augment=False,
+        device = 0,
     )
-    return predict
+    return predict[0].boxes.cls
 
 def segment_sample_model(input_image: Image) -> pd.DataFrame:
     """
